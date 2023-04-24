@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Dojoweather</title>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <header class="site-header flex space">
+            <h1>DojoWeather</h1>
+            <div class="alerts flex space">
+                <p onclick="alert('Loading weather report...')" class="alert1 mr-2">Burbank</p>
+                <p onclick="alert('Loading weather report...')" class="alert2 mr-2">Chicago</p>
+                <p onclick="alert('Loading weather report...')" class="alert3 mr-2">Dallas</p>
+            </div>
+        </header>
+        <!-- main -->
+        <main class="site-content flex col align-c-center">
+            <!-- main-header -->
+            <header class="main-header flex space bb-1">
+                <h2>San Jose</h2>
+                <div class="flex space">
+                    <p>show tempertature in&nbsp;</p>
+                    <select class="tempSelector" onchange="changeTemp(this)" name="name" id="temp">
+                        <option id="celsius" value="">&#176;C</option>
+                        <option id="farenheit" value="">&#176;F</option>
+                    </select>
+                </div>
+            </header>
+            <div class="weather-cards flex space">
+                <div class="card1 card flex col align-i-center">
+                    <h1>Today</h1>
+                    <img class="icon" src="/assets/some_rain.png" alt="weather icon">
+                    <h3>some rain</h3>
+                    <div class="tempature flex space">
+                        <p class="celsius-temp"><span class="red"><span class="temp">24</span>&#176</span></p>
+                        <p class="farenheit-temp"><span class="blue"><span class="temp">18</span>&#176</span></p>
+                    </div>
+                </div>
+                <div class="card2 card flex col align-i-center">
+                    <h1>Today</h1>
+                    <img class="icon" src="/assets/some_sun.png" alt="weather icon">
+                    <h3>some sun</h3>
+                    <div class="tempature flex space">
+                        <p><span class="red"><span class="temp">26</span>&#176</span></p>
+                        <p><span class="blue"><span class="temp">19</span>&#176</span></p>
+                    </div>
+                </div>
+                <div class="card3 card flex col align-i-center">
+                    <h1>Today</h1>
+                    <img class="icon" src="/assets/some_clouds.png" alt="weather icon">
+                    <h3>some clouds</h3>
+                    <div class="tempature flex space">
+                        <p><span class="red"><span class="temp">21</span>&#176</span></p>
+                        <p><span class="blue"><span class="temp">16</span>&#176</span></p>
+                    </div>
+                </div>
+                <div class="card4 card flex col align-i-center">
+                    <h1>Today</h1>
+                    <img class="icon" src="/assets/some_sun.png" alt="weather icon">
+                    <h3>some sun</h3>
+                    <div class="tempature flex space">
+                        <p><span class="red"><span class="temp">26</span>&#176</span></p>
+                        <p><span class="blue"><span class="temp">19</span>&#176</span></p>
+                    </div>
+                </div>
+            </div>
+            <div id="cookie-cards" class="cookies-card card flex evenly align-i-center">
+                <img class="cookie margin align-i-center" src="/assets/cookie.png" alt="">
+                <div class="flex space">
+                    <div class="cookie-msg flex  wrap">
+                        <h3>Stop! Cookie time</h3>
+                        <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. &nbsp;<a href="#">Read more...</a></p>
+                    </div>
+                    <button class="btn" onclick="removeCookies(this)">I Accept</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
